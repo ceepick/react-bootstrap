@@ -1,0 +1,16 @@
+{
+  "name": "learn-git",
+  "version": "1.0.0",
+  "description": "Interactive Git Tutorial",
+  "main": "index.js",
+  "repository": "https://github.com/ceepick/learn-git.git",
+  "author": "Cory Pickrel",
+  "license": "MIT",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.2",
+    "eslint-plugin-react": "^7.12.4"
+  }
+}
