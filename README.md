@@ -1,2 +1,2 @@
-# learn-git
-Static interface that teaches you how to create git commands.
+# react-bootstrap
+Common dependencies for ole Ceepick

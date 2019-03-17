@@ -1,0 +1,45 @@
+{
+  "name": "learn-git",
+  "version": "1.0.0",
+  "description": "Interactive Git Tutorial",
+  "main": "index.js",
+  "repository": "https://github.com/ceepick/learn-git.git",
+  "author": "Cory Pickrel",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "lint": "./node_modules/.bin/eslint src --ext .js,.jsx",
+    "pretty": "prettier --write \"src/**/*.{js,css,scss,jsx}\"",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "test": "jest --coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.15.2",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^1.3.1",
+    "jest": "^24.5.0",
+    "lint-staged": "^8.1.5",
+    "prettier": "1.16.4",
+    "prop-types": "^15.7.2",
+    "react-hot-loader": "^4.8.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
+  },
+  "dependencies": {
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}
