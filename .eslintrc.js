@@ -22,7 +22,11 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "max-len": [1, 70, 2, {ignoreComments: true}],
         "react/prop-types": [1]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 };

@@ -8,7 +8,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "lint": "./node_modules/.bin/eslint",
+    "lint": "./node_modules/.bin/eslint src --ext .js,.jsx",
+    "pretty": "prettier --write \"src/**/*.{js,css,scss,jsx}\"",
     "start": "webpack-dev-server --config ./webpack.config.js --mode development"
   },
   "devDependencies": {
@@ -20,6 +21,7 @@
     "eslint": "^5.15.2",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-react": "^7.12.4",
+    "prettier": "1.16.4",
     "prop-types": "^15.7.2",
     "react-hot-loader": "^4.8.0",
     "webpack": "^4.29.6",
