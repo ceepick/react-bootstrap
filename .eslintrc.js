@@ -3,7 +3,10 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly"
@@ -18,9 +21,8 @@ module.exports = {
     "plugins": [
         "react"
     ],
-    "parser": "babel-eslint",
     "rules": {
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error"
+        "max-len": [1, 70, 2, {ignoreComments: true}],
+        "react/prop-types": [1]
     }
 };
