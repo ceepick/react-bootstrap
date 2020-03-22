@@ -19,6 +19,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn
+      if: success()
     - run: yarn lint
       env:
         CI: true
