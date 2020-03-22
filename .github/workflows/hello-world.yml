@@ -2,9 +2,22 @@ name: hello-world
 on: [push]
 
 jobs:
-  testjob:
-    name: Test Job
+  lint:
+    name: Lint
+    
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [11.x]
+
     steps:
-      - name: Echo "Hello World"
-        run: echo "Hello World"
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+      - run: yarn
+      - run: yarn lint
+        env:
+          CI: true
